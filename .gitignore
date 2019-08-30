@@ -105,6 +105,7 @@ venv.bak/
 
 # confidential student files
 *.html
+*.htm
 *.csv
 *.xls
 *.xlsx
