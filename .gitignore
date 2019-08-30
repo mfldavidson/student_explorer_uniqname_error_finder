@@ -108,3 +108,4 @@ venv.bak/
 *.csv
 *.xls
 *.xlsx
+students_files/
