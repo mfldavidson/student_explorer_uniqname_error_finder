@@ -1,0 +1,2 @@
+# student_explorer_uniqname_error_finder
+In Student Explorer, if a cohort is created with a student uniqname that doesn't match to a student in edwprod.world CNLYR002 DM_STDNT table, the way this manifests in the application is that the advisor sees a student in their "My Students" view named "Not Happened Yet" with the uniqname "nothappen". This program, se_uniq_error_finder.py, was created in order to figure out which uniqname(s) are throwing the error so that you can go back to the advisor to let them know which uniqnames caused the error and get the correct uniqname(s).
