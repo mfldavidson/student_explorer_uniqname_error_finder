@@ -110,3 +110,5 @@ venv.bak/
 *.xls
 *.xlsx
 students_files/
+
+.DS_Store

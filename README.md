@@ -9,18 +9,14 @@ In [Student Explorer](https://github.com/tl-its-umich-edu/student_explorer/), if
 
 4. Install all necessary libraries by navigating to the repo and then running the command `pip install -r requirements.txt`
 
-5. Start on the "My Students" view for the advisor (`https://studentexplorer.ai.umich.edu/advisors/<advisor's uniqname>/`). Save the webpage (HTML only, NOT the complete page) as `students.htm` in the repo*. The easiest way to save the htm file is to just use the keyboard shortcut CMD+S for Mac or CTRL+S for Windows.
+5. Navigate to the Student Explorer Cohort Management page at https://studentexplorer.ai.umich.edu/manage/cohorts/, find the affected cohort, and click on its Code hyperlink. Click the download button to download the cohort data to an XLS file.
 
-6. Determine the affected cohort by looking at the name of the cohort showing up for the "student" "Not Happened Yet" in the cohort column. You can easily find this "student" by typing "Happen" into the first name, last name, or uniqname filter fields.
+6. Change the name of the downloaded CSV file to `cohort.csv` and put it in the same directory/folder as se_uniq_error_finder. You should now have 3 files--`se_uniq_error_finder.py`, `students.htm`, and `cohort.csv`.
 
-7. Navigate to the Student Explorer Cohort Management page at https://studentexplorer.ai.umich.edu/manage/cohorts/, find the affected cohort, and click on its Code hyperlink.
+7. Navigate to the cohort view (`https://studentexplorer.ai.umich.edu/cohorts/<cohort code>/` - this can easily be done by removing "manage/" and "members/" from the URL when you are on the cohort management page where you downloaded the XLS file). Save the webpage (HTML only, NOT the complete page) as `students.htm` in the repo*. The easiest way to save the htm file is to just use the keyboard shortcut CMD+S for Mac or CTRL+S for Windows.
 
-8. Click the "Download" button to download the cohort data to a CSV.
+8. While still inside the repo (and ensuring your virtual environment is activated), run the command `python se_uniq_error_finder.py`.
 
-9. Change the name of the downloaded CSV file to `cohort.csv` and put it in the same directory/folder as se_uniq_error_finder. You should now have 3 files--`se_uniq_error_finder.py`, `students.htm`, and `cohort.csv`.
+9. The program should print out one or more uniqnames in the command line. These are the uniqnames that caused the error. It may be worth checking the uniqnames in M-Community to ensure they are invalid uniqnames. If they are invalid, go back to the advisor and let them know which uniqnames are invalid so they can get you the right ones. If the uniqnames do show up in M-Community, discuss with Information Quest why the DM_STDNT table may be missing these students. It is sometimes the case that the student is a real student but they have never registered for any term-bound courses, which means they would never be in Student Explorer.
 
-10. While still inside the repo (and ensuring your virtual environment is activated), run the command `python se_uniq_error_finder.py`.
-
-11. The program should print out one or more uniqnames in the command line. These are the uniqnames that caused the error. It may be worth checking the uniqnames in M-Community to ensure they are invalid uniqnames. If they are invalid, go back to the advisor and let them know which uniqnames are invalid so they can get you the right ones. If the uniqnames do show up in M-Community, discuss with Information Quest why the DM_STDNT table may be missing these students.
-
-*Note that the gitignore file will ignore any .htm and .csv files so that this confidential student data is ignored.
+*Note that the gitignore file will ignore any .htm and .xls files so that this confidential student data is ignored.
