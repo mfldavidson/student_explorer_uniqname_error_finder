@@ -1,3 +1,5 @@
+# As of 9/6/19 this repository has been archived and instead lives on in [University of Michigan ITS Teaching & Learning](https://github.com/tl-its-umich-edu/student_explorer_cohort_verification).
+
 # Uniqname Error Finder for Student Explorer application
 In [Student Explorer](https://github.com/tl-its-umich-edu/student_explorer/), if a cohort is created with a student uniqname that doesn't match to a student in edwprod.world CNLYR002 DM_STDNT table, the way this manifests in the application is that the advisor sees a student in their "My Students" view named "Not Happened Yet". This program, se_uniq_error_finder.py, was created in order to figure out which uniqname(s) are throwing the error so that you can go back to the advisor to let them know which uniqnames caused the error and get the correct uniqname(s). Run this program by following these instructions for each cohort that needs to be investigated. Steps 1-4 only need to be followed the first time you run the program. After the first time, simply activate your virtual environment and proceed to step 5.
 
